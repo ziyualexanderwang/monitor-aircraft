@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Aircraft States</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/ng-websocket/ng-websocket.js"></script>
+    <script src="app.js"></script>
+    <script src="app.config.js"></script>
+    <script src="services/websocket.service.js"></script>
+    <script src="services/canvas.speed.service.js"></script>
+    <script src="services/canvas.altitude.service.js"></script>
+    <script src="dashboard/dashboard.controller.js"></script>
+  </head>
+  <body>
+
+    <div class="content">
+      <div ng-view></div>
+    </div>
+
+  </body>
+</html>

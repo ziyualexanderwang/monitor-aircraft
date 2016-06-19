@@ -1,0 +1,43 @@
+<h3>Aircraft States Dashboard</h3>
+
+<div class="dashboard">
+  <div class="display">
+    <div class="canvas-speed">
+      <canvas id="canvas-speed" width="236" height="236"></canvas>
+      <div class="speed-text">{{vm.data.airspeed.curr}}</div>
+    </div>
+    <div class="canvas-altitude">
+      <canvas id="canvas-altitude" width="236" height="236"></canvas>
+      <div class="altitude-text">{{vm.data.altitude.curr}}</div>
+    </div>
+    <div class="speed-content">
+      <div>{{vm.data.airspeed.min}}</div>
+      <div>{{vm.data.airspeed.max}}</div>
+      <div>{{vm.data.airspeed.avg}}</div>
+    </div>
+    <div class="altitude-content">
+      <div>{{vm.data.altitude.min}}</div>
+      <div>{{vm.data.altitude.max}}</div>
+      <div>{{vm.data.altitude.avg}}</div>
+    </div>
+  </div>
+  <div class="control">
+    <div class="loadding-gear">
+      <img ng-if="!vm.data.landing_gear" class="off" src="assets/img/landing-gear-off.png">
+      <img ng-if="vm.data.landing_gear" class="on" src="assets/img/landing-gear-on.png">
+    </div>
+    <div class="flaps" ng-style="vm.data.flaps">
+    </div> 
+    <div class="connection" ng-switch="vm.data.state">
+      <span ng-switch-when="1">
+        <img src="assets/img/connection-connecting.png"></img>&nbsp;&nbsp;Connecting
+      </span>
+      <span ng-switch-when="2">
+        <img src="assets/img/connection-online.png"></img>&nbsp;&nbsp;Connected
+      </span>
+        <span ng-switch-default>
+      <img src="assets/img/connection-offline.png"></img>&nbsp;&nbsp;Offline
+      </span>
+    </div>
+  </div>
+</div>

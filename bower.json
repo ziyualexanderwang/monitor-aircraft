@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "description": "Monitor Aircraft",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "jquery": "~2.1.1",
+    "angular-route": "1.4.x",
+    "angular-resource": "1.4.x",
+    "ng-websocket": "^0.2.1"
+  }
+}
